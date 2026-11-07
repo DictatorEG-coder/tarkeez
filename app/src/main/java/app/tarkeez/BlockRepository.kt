@@ -56,7 +56,6 @@ object BlockRepository {
 
     private var _reportHour by mutableIntStateOf(22)
     val reportHour: Int get() = _reportHour
-        private set
 
     var schedules by mutableStateOf<List<Schedule>>(emptyList())
         private set
