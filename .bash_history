@@ -42,3 +42,11 @@ EOF
 git add .
 git commit -m "Publish APK to Releases"
 git push
+cd ~
+unzip -q ~/storage/downloads/tarkeez.zip
+cd tarkeez
+git init -b main
+git add .
+git commit -m "Initial commit"
+git remote add origin https://github.com/DictatorEG-coder/tarkeez.git
+git push -u origin main
