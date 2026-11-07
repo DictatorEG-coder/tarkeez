@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">تركيز</string>
+    <string name="accessibility_service_description">تستخدم «تركيز» هذه الخدمة لاكتشاف فتح تطبيق محظور أو زيارة موقع محظور حتى توقفه. لا تجمع أي بيانات ولا تشاركها.</string>
+</resources>

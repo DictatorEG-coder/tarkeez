@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="108dp"
+    android:height="108dp"
+    android:viewportWidth="108"
+    android:viewportHeight="108">
+    <!-- Outer ring (gold) -->
+    <path
+        android:fillColor="#D4AF6A"
+        android:fillType="evenOdd"
+        android:pathData="M54,28 A26,26 0 1,1 53.99,28 Z M54,33 A21,21 0 1,0 54.01,33 Z" />
+    <!-- Middle ring (crimson) -->
+    <path
+        android:fillColor="#D62F3B"
+        android:fillType="evenOdd"
+        android:pathData="M54,40 A14,14 0 1,1 53.99,40 Z M54,45 A9,9 0 1,0 54.01,45 Z" />
+    <!-- Centre dot -->
+    <path
+        android:fillColor="#F2E9E4"
+        android:pathData="M54,49.5 A4.5,4.5 0 1,1 53.99,49.5 Z" />
+</vector>
