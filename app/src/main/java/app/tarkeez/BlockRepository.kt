@@ -51,9 +51,11 @@ object BlockRepository {
 
     var sessions by mutableStateOf<List<FocusSession>>(emptyList())
         private set
-    var reportEnabled by mutableStateOf(true)
-        private set
-    var reportHour by mutableIntStateOf(22)
+    private var _reportEnabled by mutableStateOf(true)
+    val reportEnabled: Boolean get() = _reportEnabled
+
+    private var _reportHour by mutableIntStateOf(22)
+    val reportHour: Int get() = _reportHour
         private set
 
     var schedules by mutableStateOf<List<Schedule>>(emptyList())
@@ -93,21 +95,21 @@ object BlockRepository {
         sessionStart = prefs.getLong(KEY_SESSION_START, 0L)
         sessionLabel = prefs.getString(KEY_SESSION_LABEL, "") ?: ""
         sessions = loadSessions()
-        reportEnabled = prefs.getBoolean(KEY_REPORT_ON, true)
-        reportHour = prefs.getInt(KEY_REPORT_HOUR, 22)
+        _reportEnabled = prefs.getBoolean(KEY_REPORT_ON, true)
+        _reportHour = prefs.getInt(KEY_REPORT_HOUR, 22)
         finishExpiredSession()
     }
 
     // ---- Daily report settings ----
 
     fun setReportEnabled(value: Boolean) {
-        reportEnabled = value
+        _reportEnabled = value
         prefs.edit().putBoolean(KEY_REPORT_ON, value).apply()
         if (value) Reminders.scheduleDailyReport(appContext) else Reminders.cancelDailyReport(appContext)
     }
 
     fun setReportHour(hour: Int) {
-        reportHour = hour
+        _reportHour = hour
         prefs.edit().putInt(KEY_REPORT_HOUR, hour).apply()
         if (reportEnabled) Reminders.scheduleDailyReport(appContext)
     }
