@@ -14,3 +14,11 @@ local.properties
 # OS
 .DS_Store
 app/*.keystore
+
+# Termux personal files
+.bash_history
+.gitconfig
+.ssh/
+.termux/
+storage/
+tahmeel
