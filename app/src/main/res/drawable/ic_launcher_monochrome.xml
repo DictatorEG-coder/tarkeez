@@ -4,15 +4,13 @@
     android:height="108dp"
     android:viewportWidth="108"
     android:viewportHeight="108">
+    <!-- Prohibition ring -->
     <path
         android:fillColor="#FFFFFF"
         android:fillType="evenOdd"
-        android:pathData="M54,28 A26,26 0 1,1 53.99,28 Z M54,33 A21,21 0 1,0 54.01,33 Z" />
+        android:pathData="M54,26 A28,28 0 1,1 53.99,26 Z M54,31 A23,23 0 1,0 54.01,31 Z" />
+    <!-- Hourglass -->
     <path
         android:fillColor="#FFFFFF"
-        android:fillType="evenOdd"
-        android:pathData="M54,40 A14,14 0 1,1 53.99,40 Z M54,45 A9,9 0 1,0 54.01,45 Z" />
-    <path
-        android:fillColor="#FFFFFF"
-        android:pathData="M54,49.5 A4.5,4.5 0 1,1 53.99,49.5 Z" />
+        android:pathData="M42,38 L66,38 L66,41 L60,50 L66,67 L66,70 L42,70 L42,67 L48,50 L42,41 Z" />
 </vector>
